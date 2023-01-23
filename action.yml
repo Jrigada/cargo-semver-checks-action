@@ -43,7 +43,7 @@ runs:
         # We add `--document-private-items` because for some reason, rustdoc seems to not always
         # generate all implemented trait information without it:
         # https://github.com/obi1kenobi/cargo-semver-check/issues/32
-        export RUSTDOC_EARLY_FLAGS="${{ inputs.crate-target }} --all-features"
+        export RUSTDOC_EARLY_FLAGS="${{ inputs.crate-target }}"
         export RUSTDOC_LATE_FLAGS="--document-private-items -Zunstable-options --output-format json"
 
         export PACKAGE_NAME="${{ inputs.crate-name }}"
